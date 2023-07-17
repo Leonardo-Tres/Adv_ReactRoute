@@ -4,7 +4,7 @@ import RootLayout from './pages/RootLayout'
 import EventsLayout from './pages/EventsLayout'
 import HomePage from './pages/HomePage'
 import EventsPage, { loader as eventsLoader} from './pages/EventsPage'
-import EventDetailPage, {loader as eventDetailLoader} from './pages/EventDetailPage'
+import EventDetailPage, {loader as eventDetailLoader, action as deleteEventAction} from './pages/EventDetailPage'
 import NewEventPage, { action as newEventAction } from './pages/NewEventPage'
 import EditEventPage from './pages/EditEventPage'
 import ErrorPage from './pages/ErrorPage';
@@ -41,7 +41,8 @@ function App() {
               children: [
                 { 
                   index: true,
-                  element: <EventDetailPage />
+                  element: <EventDetailPage />,
+                  action: deleteEventAction
                 },
                 { 
                   path: 'edit', 
